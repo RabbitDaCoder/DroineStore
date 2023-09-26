@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body class="font-inter w-full h-full relative bg-primary-200 ">
+    <!-- Headers Starts -->
+    <div class="w-full mb-10">
+      <!-- Top Header -->
+      <div class="topHeader bg-topHeader w-full h-9 px-5 py-2 hidden lg:block">
+        <div class="flex justify-between items-center">
+          <div class="customerCare text-white">
+            <span>24/7 Customer service </span>
+            <span class="ml-2 font-bold text-white">1-800-234-5678</span>
+          </div>
+          <div class="shipTrack text-white">
+            <span><a href="#">Shipping & return</a></span>
+            <span class="m-4"><a href="#">Track order</a></span>
+          </div>
+        </div>
+      </div>
+      <!-- Top Header ends-->
+      <!-- second header -->
+      <header
+        class="bg-header h-18 w-full flex justify-between items-center px-6 py-2">
+        <div class="logoMobile flex items-center px-4">
+          <div class="menu mr-6 text-white block lg:hidden" id="menu">
+            <svg
+              class="w-8"
+              id="Menu"
+              fill="#fff"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+            <svg
+              class="hidden w-8"
+              id="Xmark"
+              fill="#fff"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </div>
+          <div class="logo">
+            <a href="/public/index.html" class="text-2xl font-bold text-white">
+              <h1>Droine</h1>
+            </a>
+          </div>
+        </div>
+        <!-- Search button -->
+        <div>
+        <form class="search flex" method="get">
+          <input
+          type="text"
+          placeholder="search products..."
+          class="w-64 h-13 px-4 rounded-sm hidden lg:block outline-none border-none" />
+       
+          <button
+            class="btn w-20 h-13 bg-gray-700 text-white hover:bg-header hidden lg:block px-6 py-4 ml-5">
+            <svg
+              class="w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+            </svg>
+          </button>
+        
+        </form>
+        </div>
+        <div class="block lg:hidden">
+          <div class="MobileCartLogin flex items-center">
+            <div class="cart relative" id="cart">
+              <svg
+                fill="#fff"
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="ast-basket-icon-svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="826 826 140 140"
+                enable-background="new 826 826 140 140"
+                xml:space="preserve">
+                <path
+                  d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+              </svg>
+              <div
+                class="cartAmount absolute h-6 w-6 rounded-full bg-gray-100 text-center text-blue-500 -top--1.5 left-6">
+                0
+              </div>
+            </div>
+            <div class="h-7 border-l border-topHeader mx-3"></div>
+            <a href="/public/views/login.html">
+              <div class="capitalize text-white font-bold">Log in</div>
+            </a>
+          </div>
+        </div>
+        <!-- cart mobile side nav -->
+        <div
+          class="cartSideNav md:w-thrice w-full lg:w-96 h-screen bg-white text-black fixed right-0 top-0 z-10">
+          <div class="head flex justify-between p-3 border-b border-gray-400">
+            <span class="capitalize font-bold">shopping cart</span>
+            <span
+              ><svg
+                class="w-7 font-bold"
+                id="cart"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="h-thrice flex justify-center items-center py-6 px-3">
+            <div class="noStock">
+              <span class="text-center font-bold"
+                >No products in the cart.</span
+              >
+            </div>
+          </div>
+          <div class="h-half">
+            <div class="cart-Btn flex justify-center py-4">
+              <a
+                href="#"
+                class="block btn w-thrice h-11 bg-secondary-200 text-white capitalize text-center py-2">
+                <span class="font-bold"> continue shopping </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- second header Ends -->
+      <!-- Products Header -->
+      <div class="hidden lg:block">
+        <div
+          class="productHeader bg-header w-full h-14 border-t border-topHeader px-7 flex items-center justify-between">
+          <nav class="flex">
+            <ul class="NavLinks flex gap-12">
+              <li class="allproducts relative">
+                <a href="/public/views/shop.html">all products</a>
+                <span>
+                  <svg
+                    class="w-5 text-white inline-block"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                  </svg>
+                </span>
+                <ul class="allproductsMenu">
+                  <li><a href="/public/views/android.html">Android</a></li>
+                  <li><a href="/public/views/iphone.html">iphone</a></li>
+                  <li><a href="/public/views/window.html">Windows</a></li>
+                  <li><a href="/public/views/macbook.html">mac-book</a></li>
+                  <li><a href="/public/views/powerbank.html">power-banks</a></li>
+                </ul>
+              </li>
+              <li><a href="/public/views/pc.html">laptops</a></li>
+              <li><a href="/public/views/phones.html">phones</a></li>
+              <li><a href="/public/views/accessories.html">accessories</a></li>
+              <li><a href="/public/views/newArrivals.html">new arrivals</a></li>
+              <li><a href="/public/views/todaysDeal.html"> todays deal</a></li>
+            </ul>
+          </nav>
+          <div class="cartLogin flex items-center">
+            <a href="#">
+              <div class="cart relative" id="cart">
+                <svg
+                  fill="#fff"
+                  class="w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="ast-basket-icon-svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="826 826 140 140"
+                  enable-background="new 826 826 140 140"
+                  xml:space="preserve">
+                  <path
+                    d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+                </svg>
+                <div
+                  class="cartAmount absolute h-6 w-6 rounded-full bg-gray-100 text-center text-blue-500 -top--1.5 left-5">
+                  0
+                </div>
+              </div>
+              <!-- cart side nav -->
+              <div
+                class="cartSideNav w-92 h-screen bg-slate-600 text-white fixed right-0 top-0">
+                <div
+                  class="head flex justify-between p-3 border-b border-gray-400">
+                  <span class="capitalize">shopping cart</span>
+                  <span
+                    ><svg
+                      class="w-7"
+                      id="cart"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="h-thrice flex justify-center items-center py-6 px-3">
+                  <div class="noStock">
+                    <span class="text-center">No products in the cart.</span>
+                  </div>
+                </div>
+                <div class="h-half">
+                  <div class="cart-Btn flex justify-center py-4">
+                    <a
+                      href="#"
+                      class="block btn w-82 h-11 bg-red-700 capitalize text-center py-2">
+                      <span class=""> continue shopping </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="h-7 border-l border-topHeader mx-7"></div>
+            <a href="/public/views/login.html">
+              <div class="capitalize text-white font-bold">Log in</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Products header ends -->
+    </div>
+    <!-- Headers Ends -->
+    <!-- hamburger menu -->
+    <div class="dropMenu w-screen h-full bg-white px-9 py-4 hidden lg:hidden">
+      <div class="dropMenuBox">
+        <nav>
+          <ul class="dropNavLinks w-full">
+            <li class="relative w-full">
+              <a href="/public/views/shop.html">all products</a>
+              <span class="float-right chevron">
+                <svg
+                  class="w-5 text-black inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                </svg>
+              </span>
+              <ul class="productsMenu hidden w-full">
+                <li>
+                  <span>
+                    <svg
+                      class="w-5"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                  </span>
+                  <a href="/public/views/android.html">Android</a>
+                </li>
+                <li>
+                  <span
+                    ><svg
+                      class="w-5"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg></span
+                  ><a href="/public/views/iphone.html">iphone</a>
+                </li>
+                <li>
+                  <span
+                    ><svg
+                      class="w-5"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg></span
+                  ><a href="/public/views/window.html">Windows</a>
+                </li>
+                <li>
+                  <span
+                    ><svg
+                      class="w-5"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg></span
+                  ><a href="/public/views/macbook.html">mac-book</a>
+                </li>
+                <li>
+                  <span
+                    ><svg
+                      class="w-5"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path></svg></span
+                  ><a href="/public/views/powerbank.html">power-banks</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/public/views/pc.html">laptops</a></li>
+            <li><a href="/public/views/phones.html">phones</a></li>
+            <li><a href="/public/views/accessories.html">Accesories</a></li>
+            <li><a href="/public/views/newArrivals.html">new arrivals</a></li>
+            <li><a href="/public/views/todaysDeal.html"> todays deal</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- hamburger menu Ends -->
+        <!-- contents -->
+        <div class="flex lg:flex-row flex-col-reverse  px-0 mx-1 lg:px-8 lg:mx-10 relative ">
+          <div class="bg-white w-full lg:w-78 h-full lg:border-r border-gray-300 sticky top-0 py-4">
+            <div class="sideNavWrapper lg:px-0 px-4">
+                <div class="sideNavTitle ">
+                    Categories
+                </div>
+                <div class="sideNavBox px-4">
+                    <ul class="sideNavLinks pb-24 font-inter">
+                        <li><a href="/public/views/phones.html">Mobile Phones</a></li>
+                        <li><a href="/public/views/shop.html">Ipads</a></li>
+                        <li><a href="/public/views/pc.html">Pc & Gadgets</a></li>
+                        <li><a href="/public/views/accessories.html">Phone Accesories</a></li>
+                        <li><a href="/public/views/phonePart.html">Phone parts</a></li>
+                        <li><a href="/public/views/equipment.html">Equipments</a></li>
+                        <li><a href="/public/views/smartHome.html">Smart home</a></li>
+                    </ul>
+                </div>
+                <div class="sideNavTitle">Filter by price</div>
+                <div class="sideNavTitle average">Average rating</div>
+            </div>
+        </div>
+            <div class="bg-white w-full lg:w-900 h-full">
+                <div class="mainWrapper p-0 lg:pl-16 lg:py-16">
+                    <div class="mainBox px-3  pt-18 lg:px-0">
+                        <div class="mainTitle text-header text-5xl lg:text-7xl  font-bold pb-5 lg:pb-20">Contact Us</div>
+                        <div class="mainContent px-2 text-secondary-100 pb-7">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis velit, iaculis vel risus non, convallis rhoncus ligula. Vestibulum ut lorem posuere, malesuada neque et, placerat quam. In hac habitasse platea dictumst. Sed bibendum porttitor sem, at sollicitudin orci placerat nec.
+                        </div>
+                        <div class="flex justify-between items-center pb-5" >
+                            <div>Showing all 4 results</div>
+                            <div class="fixed bottom-0 z-40 lg:z-0 lg:relative">
+                               <form method="get">
+                                <select name="" id="" class=" w-100 lg:w-40 lg:h-12 pl-18 p-3 lg:p-3 outline-none font-inter text-secondary-500">
+                                  <option value="">Default sorting</option>
+                                  <option value="">Sort by popularity</option>
+                                  <option value="">Sort by average rating</option>
+                                  <option value="">Sort by latest</option>
+                                  <option value="">Sort by price:low to high</option>
+                                  <option value="">Sort by price:high to low </option>
+                              </select>
+                               </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productsWrapper flex justify-center">
+                        <div class="productBox grid grid-cols-1  lg:grid-cols-3 place-items-center">
+                            <div class="productCard">
+                                <div class="productCardImg relative ">
+                                    <div class="image-container">
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-9-400x400.jpg"
+                                          alt="Image 1"
+                                          class="hover-image" />
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-gallery-image-1-300x300.jpg"
+                                          alt="Image 2"
+                                          class="hover-image" />
+                                      </div>
+                                    <div class="BadgeWrapper flex justify-between w-68 h-8  absolute top-0 my-5">
+                                        <div class="sale ml-4">Sale!</div>
+                                        <div class="productCart ">
+                                            <svg
+                                              fill="#48515b"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                                              version="1.1"
+                                              id="ast-basket-icon-svg"
+                                              x="0px"
+                                              y="0px"
+                                              width="100"
+                                              height="100"
+                                              viewBox="826 826 140 140"
+                                              enable-background="new 826 826 140 140"
+                                              xml:space="preserve">
+                                              <path
+                                                d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+                                            </svg>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="productContent">
+                                    <div class="marketItemDescription">
+                                        <div class="rating">
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <a href="#" class="Description"
+                                            >Multigroomer All-in-One Trimmer Series 5000, 23
+                                            Piece Mens Grooming Kit
+                                          </a>
+                                        </div>
+                
+                                        <div class="price"><del>$49.00 </del>$44.00</div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                            <div class="productCard">
+                                <div class="productCardImg relative ">
+                                    <div class="image-container">
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-9-400x400.jpg"
+                                          alt="Image 1"
+                                          class="hover-image" />
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-gallery-image-1-300x300.jpg"
+                                          alt="Image 2"
+                                          class="hover-image" />
+                                      </div>
+                                    <div class="BadgeWrapper flex justify-between w-68 h-8  absolute top-0 my-5">
+                                        <div class="sale ml-4">Sale!</div>
+                                        <div class="productCart ">
+                                            <svg
+                                              fill="#48515b"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                                              version="1.1"
+                                              id="ast-basket-icon-svg"
+                                              x="0px"
+                                              y="0px"
+                                              width="100"
+                                              height="100"
+                                              viewBox="826 826 140 140"
+                                              enable-background="new 826 826 140 140"
+                                              xml:space="preserve">
+                                              <path
+                                                d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+                                            </svg>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="productContent">
+                                    <div class="marketItemDescription">
+                                        <div class="rating">
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <a href="#" class="Description"
+                                            >Multigroomer All-in-One Trimmer Series 5000, 23
+                                            Piece Mens Grooming Kit
+                                          </a>
+                                        </div>
+                
+                                        <div class="price"><del>$49.00 </del>$44.00</div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                            <div class="productCard">
+                                <div class="productCardImg relative ">
+                                    <div class="image-container">
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-9-400x400.jpg"
+                                          alt="Image 1"
+                                          class="hover-image" />
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-gallery-image-1-300x300.jpg"
+                                          alt="Image 2"
+                                          class="hover-image" />
+                                      </div>
+                                    <div class="BadgeWrapper flex justify-between w-68 h-8  absolute top-0 my-5">
+                                        <div class="sale ml-4">Sale!</div>
+                                        <div class="productCart ">
+                                            <svg
+                                              fill="#48515b"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                                              version="1.1"
+                                              id="ast-basket-icon-svg"
+                                              x="0px"
+                                              y="0px"
+                                              width="100"
+                                              height="100"
+                                              viewBox="826 826 140 140"
+                                              enable-background="new 826 826 140 140"
+                                              xml:space="preserve">
+                                              <path
+                                                d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+                                            </svg>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="productContent">
+                                    <div class="marketItemDescription">
+                                        <div class="rating">
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <a href="#" class="Description"
+                                            >Multigroomer All-in-One Trimmer Series 5000, 23
+                                            Piece Mens Grooming Kit
+                                          </a>
+                                        </div>
+                
+                                        <div class="price"><del>$49.00 </del>$44.00</div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                            <div class="productCard">
+                                <div class="productCardImg relative ">
+                                    <div class="image-container">
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-9-400x400.jpg"
+                                          alt="Image 1"
+                                          class="hover-image" />
+                                        <img
+                                          src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-gallery-image-1-300x300.jpg"
+                                          alt="Image 2"
+                                          class="hover-image" />
+                                      </div>
+                                    <div class="BadgeWrapper flex justify-between w-68 h-8  absolute top-0 my-5">
+                                        <div class="sale ml-4">Sale!</div>
+                                        <div class="productCart ">
+                                            <svg
+                                              fill="#48515b"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                                              version="1.1"
+                                              id="ast-basket-icon-svg"
+                                              x="0px"
+                                              y="0px"
+                                              width="100"
+                                              height="100"
+                                              viewBox="826 826 140 140"
+                                              enable-background="new 826 826 140 140"
+                                              xml:space="preserve">
+                                              <path
+                                                d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z"></path>
+                                            </svg>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="productContent">
+                                    <div class="marketItemDescription">
+                                        <div class="rating">
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                          <div class="star">
+                                            <svg
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              viewBox="0 0 24 24"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              aria-hidden="true">
+                                              <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <a href="#" class="Description"
+                                            >Multigroomer All-in-One Trimmer Series 5000, 23
+                                            Piece Mens Grooming Kit
+                                          </a>
+                                        </div>
+                
+                                        <div class="price"><del>$49.00 </del>$44.00</div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+     <!-- footers -->
+        <footer>
+          <div class="footerWrapper flex justify-center font-inter w-full">
+            <div class="footerBox grid grid-cols-1 lg:grid-cols-4">
+              <div class="footerCard">
+                <img
+                  src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-logo-mono.svg"
+                  alt="" />
+              </div>
+              <div class="footerCard">
+                <div class="footerTitle">Shop</div>
+                <nav>
+                  <ul class="footerLinks">
+                    <li><a href="/public/views/todaysDeal.html">Hot deals</a></li>
+                    <li><a href="/public/views/shop.html">Categories</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Rebates</a></li>
+                    <li><a href="#">Weekly deals</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="footerCard">
+                <div class="footerTitle">Need help?</div>
+                <nav>
+                  <ul class="footerLinks">
+                    <li><a href="/public/views/contact.html">Contact</a></li>
+                    <li><a href="#">Order tracking</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footerCard">
+                <div class="footerTitle">Contact</div>
+                <nav>
+                  <ul class="footerLinks">
+                    <li>
+                      <a href="#">123 Fifth Avenue, New York, NY 10160</a>
+                    </li>
+                    <li><a href="#">contact@info.com</a></li>
+                    <li><a href="#">929-242-6868</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </footer>
+            <!-- bottom -->
+          <div
+        class="footerBottom w-full h-full min-h-16 lg:min-h-20 bg-secondary-200 py-7 lg:px-20">
+        <div class="bottomWrapper flex  flex-col lg:flex-row justify-between">
+          <div
+          class="bottomCols text-secondary-100 mb-6 lg:mb-0 text-center md:text-start">
+          © 2023 Droine Store. Powered by Edeh chinedu daniel
+        </div>
+        <div class="bottomCols flex justify-center items-center">
+          <div class="payRow">
+            <div class="payImg">
+              <img
+                src="https://websitedemos.net/electronic-store/wp-content/uploads/sites/1055/2022/03/electronic-store-footer-payment-gateway-icon.png"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        </div>
+         </div>
+      <!-- take to top -->
+        <a href="#">
+          <div class=" takeTop w-8 h-9 bg-header fixed bottom-16 lg:bottom-8 right-8 flex justify-center text-white rounded">
+            <svg class="w-7 " fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+            </svg>
+          </div>
+        </a>
+      <script src="/public/main.js"></script>
+</body>
+</html>

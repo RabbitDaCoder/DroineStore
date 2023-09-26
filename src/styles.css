@@ -1,0 +1,605 @@
+/* font imoprt */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* src/styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Your custom CSS here */
+body {
+  width: 100%;
+  max-width: 3000px;
+}
+
+.NavLinks li a {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: capitalize;
+  @apply text-white;
+}
+
+.allproductsMenu {
+  @apply absolute top-6 -left-1 bg-header hidden w-60 py-4 px-4 duration-300 transition ease-in-out z-10;
+}
+.allproducts:hover .allproductsMenu {
+  display: block;
+}
+.allproductsMenu li {
+  margin-bottom: 0.56rem;
+}
+.search input:placeholder-shown {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.cartSideNav {
+  display: none;
+}
+.cartSideNav.open {
+  display: block;
+}
+
+/* Mobile drop down nav links*/
+.dropNavLinks li {
+  @apply pb-4 text-header;
+}
+
+.productsMenu li {
+  @apply py-2 flex text-header;
+}
+
+/*  Home Container */
+.imgBox {
+  background: url("https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-hero-image.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  zoom: 1.335;
+  width: 100%;
+  max-width: 3000px;
+  height: 100%;
+  min-height: 35rem;
+
+  @apply flex items-baseline justify-center lg:justify-end lg:px-8 pt-32 lg:pt-24;
+}
+.contentWrapper {
+  @apply px-5;
+}
+.contentBox {
+  @apply bg-white w-full h-full lg:w-78 py-3  px-5 lg:px-6 lg:py-8;
+}
+.content {
+  @apply mb-4;
+}
+.content h2 {
+  @apply text-sm lg:text-2xl text-secondary-200 font-bold mb-5;
+}
+.content p {
+  @apply text-secondary-100 text-xs lg:text-sm;
+}
+.contentImg {
+  @apply mb-2 lg:mb-5 w-20;
+}
+.shopNow {
+  @apply text-header font-bold text-xs;
+}
+/* Market card */
+.marketCardWrapper {
+  @apply flex justify-center;
+}
+.marketCardBox {
+  @apply bg-white w-quater lg:absolute  lg:-bottom-28 my-9 px-4 py-7 lg:pt-7 border border-gray-300;
+}
+.marketWrapper {
+  @apply grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2;
+}
+.marketCard:nth-last-child(1) {
+  @apply flex  items-start lg:items-center lg:border-r-0 mb-4 mr-4;
+}
+.marketCard {
+  @apply flex  items-start lg:items-center border-gray-300 lg:border-r mb-4 mr-4;
+}
+.marketCardIcon svg {
+  @apply w-9 text-header;
+}
+
+.marketCardContent {
+  @apply lg:ml-3;
+}
+.marketCardContent h2 {
+  @apply font-bold text-sm text-secondary-200;
+}
+.marketCardContent p {
+  @apply text-sm text-secondary-100;
+}
+
+/* Market Container */
+.marketItem {
+  height: 100%;
+  min-height: 35rem;
+  @apply p-5 bg-white w-quater mt-28 border border-gray-300;
+}
+.marketItemBox {
+  @apply flex justify-center;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  min-height: 285px;
+  max-width: 285px;
+  @apply -mb-18 pb-2;
+}
+
+.marketItemCard li {
+  @apply mb-10 pb-6;
+}
+/* Second market items cards  */
+.marketItemTwo {
+  height: 100%;
+  min-height: 35rem;
+  box-shadow: 0 12px 0 -6px rgba(0, 0, 0, 0.04);
+  @apply p-5 bg-white w-quater  border border-gray-300 my-10;
+}
+.marketItemTwoBox {
+  @apply flex justify-center;
+}
+.marketItemTwoCard {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-start;
+}
+.marketItemTwoCard li {
+  @apply mb-6 pb-5;
+}
+
+.image-container {
+  min-height: 285px;
+  max-width: 285px;
+  @apply mb-2 relative w-full h-full;
+}
+
+.hover-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.78s ease-in-out;
+}
+
+.hover-image:last-child {
+  opacity: 0; /* Initially hide the second image */
+}
+
+.image-container:hover .hover-image:first-child {
+  opacity: 0; /* Hide the first image on hover */
+}
+
+.image-container:hover .hover-image:last-child {
+  opacity: 1; /* Display the second image on hover */
+}
+
+/* Market item Text */
+.marketTitle {
+  @apply flex items-center;
+}
+.marketTitle h1 {
+  @apply font-bold text-2xl;
+}
+.marketTitle a {
+  @apply text-header font-bold text-base ml-5;
+}
+.marketItemDescription {
+  @apply text-start pl-5 py-4;
+}
+.rating {
+  @apply flex mb-1;
+}
+.star svg {
+  @apply w-5 text-primary-300;
+}
+.Description {
+  @apply text-base font-semibold text-secondary-200 block mb-1;
+}
+.price {
+  @apply font-inter font-bold text-sm text-secondary-300;
+}
+.price del {
+  @apply text-primary-400 pr-1;
+}
+.saleCartWrapper {
+  @apply absolute top-2 left-3;
+}
+.saleCartItem {
+  @apply flex justify-between items-center;
+}
+.sale {
+  @apply text-sm bg-white w-16 h-7 flex justify-center items-center rounded-full drop-shadow-md font-inter cursor-pointer;
+}
+
+.Itemcart {
+  @apply absolute left-56 w-8 bg-white flex justify-center rounded-full hidden drop-shadow-md;
+}
+.Itemcart svg {
+  @apply w-5 h-8 hover:text-black;
+}
+.marketItemImg:hover .Itemcart {
+  @apply flex;
+}
+
+/* Banner two */
+.shopBanner {
+  @apply my-2   lg:my-8 w-full h-full;
+}
+.shopBannerWrapper {
+  @apply flex justify-center w-full h-full;
+}
+.shopBannerBox {
+  @apply w-full h-full  min-h-48 flex justify-center items-center px-3;
+}
+.shopBannerCard {
+  @apply relative -z-20 h-78 w-full lg:w-97;
+}
+.shopBannerCard:first-child {
+  background-image: linear-gradient(180deg, #f1f2f6 85%, #00000000 85%);
+}
+.shopBannerCard:nth-child(2) {
+  background-image: linear-gradient(180deg, #e8ebed 85%, #00000000 85%);
+  @apply ml-3;
+}
+.shopBannerCard:last-child {
+  background-image: linear-gradient(180deg, #f8edd1 85%, #00000000 85%);
+  @apply ml-3;
+}
+
+.shopbannerImg img {
+  @apply absolute top-7 right-5 -z-10 w-18 lg:w-36;
+}
+.shopbannerImg .clipper {
+  @apply w-22;
+}
+.shopBannerContent {
+  @apply flex flex-col  p-5 z-10;
+}
+.shopBannerContent h2 {
+  @apply font-semibold text-secondary-200 text-4.5xl mb-1 lg:mb-4;
+}
+.shopBannerContent .contentPrice {
+  @apply text-secondary-300 mb-1 lg:mb-4;
+}
+.shopBannerContent a {
+  @apply text-header font-bold mb-2 pb-4;
+}
+
+/* brand deal  */
+.brandDealCard {
+  @apply h-72 w-78 lg:h-extraLgH lg:w-extraLgW   font-poppins;
+}
+.brandDealCard img {
+  @apply w-full h-full;
+}
+.brandDealCard:first-child {
+  @apply bg-white;
+}
+.brandContent {
+  @apply p-4 lg:p-9;
+}
+.brandContent h4 {
+  @apply uppercase text-sm font-semibold text-secondary-400 mb-6;
+}
+.brandContent h1 {
+  @apply text-xl lg:text-4xl font-semibold text-secondary-200 mb-5;
+}
+.brandContent a {
+  @apply text-header font-semibold;
+}
+
+/* Top brands */
+.topBrandWrapper {
+  @apply flex justify-center items-center mx-5;
+}
+
+.brandsCard {
+  @apply w-36 lg:w-50 h-24 flex justify-center bg-white border lg:border-r  border-gray-300;
+}
+
+.brandsCard img {
+  @apply w-16;
+}
+
+/* Reviews */
+
+.reviewCard {
+  @apply w-84 lg:w-extraLgH h-68 bg-white;
+}
+.reviewContent {
+  @apply px-6 py-8;
+}
+
+.profile img {
+  @apply rounded-full;
+}
+
+/* Contact page */
+.contactCard {
+  @apply w-78 h-36 flex flex-col justify-center border-t  border-gray-300;
+}
+.contactCard:last-child {
+  @apply border-t-0;
+}
+.contactCard a {
+  @apply text-secondary-100 underline;
+}
+.contactCard h1 {
+  @apply text-secondary-200 text-2xl font-bold;
+}
+.contactCard img {
+  @apply absolute -top-14;
+}
+/* Subscribe */
+.SubscribeCard {
+  @apply flex items-center w-78 h-16 mb-9 lg:mb-0;
+}
+.svgBox svg {
+  @apply w-14 text-secondary-200;
+}
+.SubscribeCard form {
+  @apply flex flex-col lg:flex-row justify-center ;
+}
+form input {
+  @apply w-78 h-14 mb-6 lg:mb-0 border border-gray-300 rounded bg-primary-500 px-3;
+}
+form input::placeholder {
+  @apply text-secondary-100;
+}
+form button {
+  @apply w-full lg:w-44 h-12 bg-button-100 ml-3 text-lg capitalize text-white font-semibold;
+}
+/* Footer */
+footer {
+  @apply w-full  h-full min-h-78  border-t border-gray-300 bg-white py-6;
+}
+.footerCard {
+  @apply w-68  h-full min-h-16  py-12 lg:mb-0 flex flex-col justify-center lg:justify-start;
+}
+.footerCard img{
+  @apply lg:w-36;
+}
+.footerTitle {
+  @apply text-xl font-semibold text-secondary-200 mb-12 text-center lg:text-start ;
+}
+
+.footerLinks {
+  @apply text-center lg:text-start ;
+}
+
+.footerLinks li a {
+  @apply text-header pb-4;
+}
+
+
+
+/* Other Section Pages */
+.sideNavTitle {
+  @apply font-poppins text-xl text-secondary-200 font-bold pb-22
+}
+.average {
+  @apply pb-16
+}
+.sideNavLinks li a {
+  @apply  text-secondary-300 hover:text-header
+}
+.sideNavLinks li  {
+  @apply mb-3 
+}
+
+
+/* Product section */
+.productBox a {
+@apply block
+}
+.productCard  {
+  @apply w-72 h-100
+
+}
+.productCardImg img {
+  @apply w-68 h-68
+}
+
+.productCart svg {
+  @apply w-7 h-7 absolute right-4 
+}
+.productCart{
+  opacity: 0;
+}
+.productCardImg:hover .productCart {
+  opacity:1;
+}
+
+.takeTop {
+  pointer-events:none;
+  @apply opacity-0 transition-opacity
+}
+.takeTop.active {
+  pointer-events:auto;
+  @apply opacity-80
+}
+
+#pagination {
+  @apply pl-20 flex items-center
+}
+#pagination a{
+  @apply border border-header py-2 px-4 rounded text-header font-bold ml-3 hover:bg-header hover:text-white
+}
+#pagination a.active {
+  @apply bg-header py-2 px-4 rounded-sm text-white font-bold
+}
+#pagination svg {
+@apply w-6 inline-block
+}
+/* single products */
+.singleProductWrapper .singleProduct {
+ @apply w-full lg:w-55 
+}
+.singleProductWrapper .singleProductDetails {
+  @apply w-full lg:w-45
+}
+.singleProductImg img {
+  margin-bottom: 32px;
+@apply w-full
+}
+.smallImgGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.smallImgCol {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+/* single product details */
+
+.singleProductLink a {
+  @apply  text-secondary-100 pb-3 font-inter
+}
+.singleProductLink a:not(1) {
+  @apply inline pl-1
+}
+.singleProductLink i{
+  @apply inline pl-1
+}
+.singleProductDetails h1 {
+  @apply text-3xl font-bold text-secondary-200 py-3 font-poppins
+}
+.singleProductPrice {
+  @apply text-2xl text-secondary-300 font-bold
+}
+.singleProductPrice del {
+  @apply text-secondary-100 font-light pr-2
+}
+/* single product features */
+.singleProductFeatures {
+  @apply py-3
+}
+.singleProductFeatures h5{
+  @apply font-bold text-secondary-200 mb-4
+}
+.singleProductFeatures ul {
+  @apply ml-10 relative  font-inter
+}
+.singleProductFeatures ul li {
+  @apply relative text-secondary-300
+}
+.singleProductFeatures ul li::before {
+  content: ".";
+  position: absolute;
+  top: -.63em;
+  left: -.89em;
+  font-size: 2em;
+  font-weight: 700;
+}
+/* Quantity */
+.quantity button  {
+  @apply border border-gray-300 w-10 
+}
+.quantity button:first-child{
+  @apply border-r-0
+}
+.quantity button:last-child{
+  @apply border-l-0
+}
+.quantity span {
+  @apply  border border-gray-300  w-10 h-8 flex justify-center items-center
+}
+.AddtoCart {
+  @apply px-7 h-8 bg-secondary-200 text-white font-bold ml-6 hover:bg-header
+}
+
+/* Tab */
+.tabLink {
+  @apply flex  border-t border-gray-300  py-2 w-full
+}
+.tabLink li a {
+  @apply text-secondary-300 font-semibold relative
+}
+.tabLink li a.active::before {
+ content: "";
+ position: absolute; 
+ width: 6em;
+ height: .154em;
+ background: #0769DA;
+ top: -.75em;
+ left: 0;
+}
+#tab-2 {
+  @apply ml-5
+}
+
+
+  .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+  }
+
+  .rating > input {
+    display: none;
+  }
+
+  .rating > label {
+    display: inline-block;
+    width: 1.1em;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .rating > label:before {
+    content: '\2606';
+  }
+
+  .rating > input:checked ~ label:before,
+  .rating > input:checked ~ label ~ label:before,
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before {
+    content: '\2605';
+    color: #fbbb24;
+  }
+
+  .rating > input:hover ~ label,
+  .rating > input:checked ~ label {
+    color: #fbbb24;
+  }
+
+/* Review Form */
+.reviewForm h1 {
+  @apply text-2xl text-secondary-200 mb-4
+}
+.reviewForm span {
+  @apply  text-secondary-300 mb-4
+}
+.ratingBox h2 {
+  @apply text-lg text-secondary-300 mb-4
+}
+.formbox h3 {
+@apply text-xl text-secondary-300 mb-4
+}
+.formbox textarea {
+@apply w-full h-22 outline-none p-3
+}
+.formbox h5  {
+  @apply  text-secondary-300 mb-4
+}
+.formWrapper .formbox input {
+  @apply w-full  h-13 mb-4
+}
+.formWrapper  {
+  @apply flex 
+}
+.formWrapper .formbox{
+  @apply w-900
+}
+.formWrapper .formbox:last-child{
+  @apply ml-5 
+}
+.reviewForm button {
+  @apply px-5 py-2 bg-secondary-200 hover:bg-header font-bold text-white
+}
